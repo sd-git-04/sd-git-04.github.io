@@ -19,8 +19,8 @@ export const site = {
     title: 'Swastik Dolas | Full Stack Developer & AI & GenAI Engineer',
     description:
       'Swastik Dolas: Software Engineer with 4+ years of experience building scalable web and mobile applications with React, React Native and Node.js.',
-    // TODO: set the final public URL (sheet says swastik-git.github.io; the repo has a CNAME for swastikdolas.me).
-    url: 'https://swastik-git.github.io/',
+    // Custom domain from the repo's CNAME. Also served at https://sd-git-04.github.io/ once Pages is enabled.
+    url: 'https://swastikdolas.me/',
   },
 };
 

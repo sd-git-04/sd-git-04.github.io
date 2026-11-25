@@ -40,7 +40,7 @@ Everything below is marked in the code with `TODO` comments and, where it is vis
 - [ ] **IDFC Bank app**: check your employer's policy before publishing the project name and description.
 - [ ] **Project links** (optional): add a demo or repo link to a project's `link` field if one can be shared.
 - [ ] **Favicon**: `public/favicon.svg` is a placeholder "SD" icon. Replace it with your own.
-- [ ] **Public URL**: the sheet says `https://swastik-git.github.io`, but the existing `CNAME` says `swastikdolas.me`. Decide which is canonical and update `site.seo.url` and `index.html` (`og:url`).
+- [x] **Public URL**: canonical URL set to `https://swastikdolas.me/` in `site.seo.url` and `index.html` (`og:url`). The site is also served at `https://sd-git-04.github.io/`. Change both if you pick a different address.
 - [ ] **Social preview image**: add an `og:image` once you have one.
 - [ ] **Repo name**: the existing README named the repo `sd-git-04.github.io`. It must be `swastik-git.github.io` for the planned URL and `base: '/'`.
 
