@@ -166,8 +166,7 @@ export type Degree = {
 };
 
 // CGPA is optional. Set showCgpa to true to display it.
-// TODO: decide whether to show CGPA (sheet note: include only if you want it shown).
-export const showCgpa = false;
+export const showCgpa = true;
 
 export const education: Degree[] = [
   {
