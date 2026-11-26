@@ -13,6 +13,7 @@
       name="description"
       content="Swastik Dolas: Software Engineer with 4+ years of experience building scalable web and mobile applications with React, React Native and Node.js."
     />
+    <link rel="canonical" href="https://swastikdolas.me/" />
     <meta name="author" content="Swastik Dolas" />
     <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0d10" media="(prefers-color-scheme: dark)" />
@@ -34,6 +35,25 @@
       name="twitter:description"
       content="Software Engineer with 4+ years of experience building scalable web and mobile applications."
     />
+
+    <!-- Structured data for search engines and sourcing tools. Keep in sync with contact and site in src/data/portfolio.ts. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Swastik Dolas",
+        "url": "https://swastikdolas.me/",
+        "jobTitle": "Full Stack Developer & AI & GenAI Engineer",
+        "address": { "@type": "PostalAddress", "addressRegion": "Madhya Pradesh", "addressCountry": "IN" },
+        "knowsAbout": ["React.js", "React Native", "JavaScript", "Node.js", "Python", "REST APIs", "AWS", "Docker"],
+        "sameAs": ["https://github.com/swastik-git", "https://www.linkedin.com/in/swastikdolas/"]
+      }
+    </script>
+    <noscript>
+      <style>
+        .reveal { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
   </head>
   <body>
     <div id="root"></div>

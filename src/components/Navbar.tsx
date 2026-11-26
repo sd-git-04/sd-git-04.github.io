@@ -9,10 +9,12 @@ const sectionIds = nav.map((item) => item.id);
 export function Navbar() {
   const active = useActiveSection(sectionIds);
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(() => window.scrollY > 8);
+  // Starts unscrolled so server and client markup match; the effect syncs it on mount.
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);

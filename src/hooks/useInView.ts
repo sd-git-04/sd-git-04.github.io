@@ -1,17 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
 
 // Returns true once the element has scrolled into view (one-way: stays visible).
-// Falls back to visible immediately where IntersectionObserver is unavailable.
+// Starts hidden on both server and client so the pre-rendered HTML matches hydration;
+// the effect below reveals it right after mount where IntersectionObserver is unavailable.
 export function useInView<T extends Element>() {
   const ref = useRef<T>(null);
-  // Without IntersectionObserver there is nothing to wait for, so start visible.
-  const [visible, setVisible] = useState(
-    () => typeof IntersectionObserver === 'undefined',
-  );
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const node = ref.current;
-    if (!node || typeof IntersectionObserver === 'undefined') return;
+    if (typeof IntersectionObserver === 'undefined') {
+      setVisible(true);
+      return;
+    }
+    if (!node) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
