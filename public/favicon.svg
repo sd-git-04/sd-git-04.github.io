@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SD placeholder favicon">
   <!-- TODO: placeholder favicon; replace with your own mark. -->
-  <rect width="64" height="64" rx="12" fill="#1d4ed8"/>
-  <text x="32" y="41" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">SD</text>
+  <rect width="64" height="64" rx="18" fill="#16140f"/>
+  <text x="32" y="41" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="26" font-weight="700" fill="#fbfaf7">SD</text>
 </svg>

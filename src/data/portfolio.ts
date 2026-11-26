@@ -14,6 +14,8 @@ export const site = {
   pitch:
     "I'm a Software Engineer with 4+ years of experience building scalable web and mobile applications.",
   location: 'Madhya Pradesh, India',
+  // Shown in the hero; taken from the Profile intro.
+  coreStack: ['React.js', 'React Native', 'Node.js'],
   // Shown in the browser tab, search results and social previews.
   seo: {
     title: 'Swastik Dolas | Full Stack Developer & AI & GenAI Engineer',
@@ -82,7 +84,7 @@ export const experience: Job[] = [
       'Worked on cloud deployment workflows.',
     ],
     // TODO: add measurable results for this role (no metrics were provided in the sheet).
-    results: { placeholder: 'Results and metrics to add.' },
+    results: { placeholder: 'results and metrics' },
   },
 ];
 

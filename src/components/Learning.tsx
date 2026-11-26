@@ -5,18 +5,19 @@ import { Section } from './Section';
 export function Learning() {
   return (
     <Section id="learning" title="Learning">
-      <ul className="card-grid">
+      <ul className="learn-grid">
         {learning.map((item) => (
-          <li key={item.title} className="card">
-            <div className="card-tags">
-              <span className="badge">{item.status}</span>
+          <li key={item.title} className="learn">
+            <div className="learn-head">
+              <h3 className="learn-title">{item.title}</h3>
+              <span className="pill pill-progress">
+                <span className="pulse-dot" aria-hidden="true" />
+                {item.status}
+              </span>
             </div>
-            <h3 className="card-title">{item.title}</h3>
-            <ul className="chip-list">
+            <ul className="learn-topics">
               {item.topics.map((topic) => (
-                <li key={topic} className="chip">
-                  {topic}
-                </li>
+                <li key={topic}>{topic}</li>
               ))}
             </ul>
           </li>

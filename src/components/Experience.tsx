@@ -5,27 +5,30 @@ import { Section } from './Section';
 export function Experience() {
   return (
     <Section id="experience" title="Experience">
-      <ol className="timeline">
+      <ol className="exp-list">
         {experience.map((job) => (
-          <li key={`${job.company}-${job.role}`} className="job">
-            <h3 className="job-title">
-              {job.role} <span className="muted">at {job.company}</span>
-            </h3>
-            <p className="job-period">{job.period}</p>
-            <p>{job.summary}</p>
-            <ul className="bullets">
-              {job.highlights.map((h) => (
-                <li key={h}>{h}</li>
+          <li key={`${job.company}-${job.role}`} className="exp">
+            <div className="exp-head">
+              <div>
+                <h3 className="exp-role">{job.role}</h3>
+                <p className="exp-company">{job.company}</p>
+              </div>
+              <span className="pill">{job.period}</span>
+            </div>
+            <p className="exp-summary">{job.summary}</p>
+            <ul className="exp-points">
+              {job.highlights.map((point) => (
+                <li key={point}>{point}</li>
               ))}
             </ul>
-            <p className="job-results">
-              <strong>Results: </strong>
+            <div className="exp-results">
+              <span className="exp-results-label">Results</span>
               {typeof job.results === 'string' ? (
-                job.results
+                <p>{job.results}</p>
               ) : (
                 <Placeholder>{job.results.placeholder}</Placeholder>
               )}
-            </p>
+            </div>
           </li>
         ))}
       </ol>

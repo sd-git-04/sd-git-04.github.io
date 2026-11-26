@@ -7,6 +7,7 @@ import { Learning } from './components/Learning';
 import { Navbar } from './components/Navbar';
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
+import { ArrowUp } from './components/Icons';
 import { site } from './data/portfolio';
 
 const currentYear = new Date().getFullYear();
@@ -29,10 +30,13 @@ export default function App() {
         <Contact />
       </main>
       <footer className="footer">
-        <div className="container">
+        <div className="container footer-inner">
           <p>
             © {currentYear} {site.name}
           </p>
+          <a className="footer-top" href="#hero">
+            Back to top <ArrowUp size={14} />
+          </a>
         </div>
       </footer>
     </>
